@@ -35,7 +35,13 @@ If you are using the `Isotope` framework, you'll likely be register the `AppleAu
 import 'package:isotope/registrar.dart';
 
 void setup() {
-  Registrar.instance.registerLazySingleton<AppleAuthService>(AppleAuthService());
+  // Determine if the device has Apple Sign In available as an authentication method.
+  bool appleIsAvailable = await AppleAuthAvailable.check();
+
+  // If Apple is available, then register the AppleAuthService.
+  if (appleIsAvailable) {
+    Registrar.instance.registerLazySingleton<AppleAuthService>(AppleAuthService());
+  }
 }
 ```
 
