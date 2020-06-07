@@ -1,0 +1,24 @@
+name: isotope_auth_apple
+description: Apple authentication service for Isotope apps.
+version: 1.0.0
+homepage: https://github.com/isotope-studio/isotope_auth_apple
+
+publish_to: 'none'
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  firebase_auth: ^0.15.3
+  apple_sign_in: ^0.1.0
+  isotope_auth:
+    git: git://github.com/isotopeltd/isotope_auth.git
+    version: ^1.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
