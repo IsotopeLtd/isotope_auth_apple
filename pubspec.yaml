@@ -11,6 +11,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  firebase_core: ^0.4.5
   firebase_auth: ^0.15.3
   apple_sign_in: ^0.1.0
   isotope_auth:
